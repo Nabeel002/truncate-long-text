@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="style.css" />
+<html>
+  <body>
+    <p id="demo">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo quia
+      ipsum, voluptates voluptatum nisi recusandae unde totam? Labore animi
+      impedit molestias quas et ipsam explicabo ad ipsa tempore, amet natus
+      maiores commodi placeat? Aliquid officiis, dolores molestias vel
+      reiciendis deserunt iusto aut distinctio consequuntur corporis voluptas
+      rem. Odio, repellat a ipsum quibusdam necessitatibus harum expedita sunt
+      quam ducimus officiis? Voluptates sint nam, dolores voluptatum architecto
+      cum pariatur mollitia culpa, at obcaecati vitae? Eos quae minima ipsum
+      fugit nam reprehenderit exercitationem optio fugiat beatae, veniam
+      accusamus cum praesentium neque fuga qui excepturi? Doloremque reiciendis
+      non magni, nostrum, commodi aperiam at laudantium deserunt repellat facere
+      dignissimos cupiditate eveniet minima voluptatum architecto iste,
+      excepturi quo fugit veniam. Dicta totam cum, asperiores dolorem ad maiores
+      esse facilis, voluptatibus deserunt ut eum nostrum distinctio dolores iste
+      labore aut quo ducimus est neque nemo voluptate! Quis, deserunt? Mollitia,
+      est quos omnis perspiciatis ullam qui vitae. Ducimus soluta illum laborum
+      assumenda, rem voluptate! Sed, possimus totam! Quibusdam alias aspernatur
+      voluptates quae, explicabo et officia numquam aliquid nesciunt minus
+      aperiam mollitia voluptas tenetur doloremque consectetur fugiat earum
+      laboriosam unde corporis iste minima corrupti doloribus. Sit tempora sint
+      aliquid voluptatibus corporis magni? Error amet, doloremque voluptas eum
+      nemo, dolore ipsam dolores quo necessitatibus sunt eos consectetur est
+      deleniti id quam illo quis nam! Explicabo eaque voluptas doloremque ullam
+      fuga velit soluta eius! Laudantium omnis pariatur eaque laborum deserunt
+      in nobis culpa esse molestiae magnam commodi, fugiat dolores enim, sed
+      ipsum voluptatum architecto voluptatibus! Quod neque consequatur soluta
+      dolores placeat quaerat dignissimos fugiat omnis voluptatum est suscipit
+      laborum ea facere officia, atque eos iure repellendus ullam? Esse,
+      molestias! Saepe quaerat similique expedita alias voluptatum vero nostrum
+      deleniti amet eligendi aspernatur cumque veritatis, ipsum dolorum porro
+      debitis vitae ab dolorem, veniam unde. Cum tenetur ad modi voluptatem id
+      rem? Vel, aliquid.
+    </p>
+    <button id="btn" onclick="myFunction()" onclick="readLess()">
+      read more
+    </button>
+
+    <script>
+
+
+      var x = document.getElementById("demo").textContent;
+
+      let result = "";
+      for (let letter of x) {
+        result += letter;
+      }
+
+      if (result.length > 300) {
+        let new_result = result.substr(0, 600);
+        new_result+='....'
+        document.getElementById("demo").innerHTML = new_result;
+        
+        
+      }
+      let button = document.getElementById("btn");
+
+      let new_res = document.getElementById("demo").textContent;
+    
+
+      function myFunction() {
+        document.getElementById("demo").innerHTML = result;
+
+        button.innerHTML =
+          '<button id="notbtn" onclick="myNewFunction()" onclick="readLess()">read less</button>';
+        button.onclick = myNewFunction;
+
+        function myNewFunction() {
+          button.innerHTML = "read more";
+          document.getElementById("demo").innerHTML = new_res;
+          button.onclick = myFunction;
+        }
+      }
+    </script>
+  </body>
+</html>

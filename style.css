@@ -1,0 +1,27 @@
+#btn{
+   border: none;
+   background-color: transparent;
+   cursor: pointer;
+   color: rgb(93, 146, 163);
+   border-bottom: 1px solid rgb(75, 75, 235);
+   padding: 0;
+  
+
+}
+
+
+#notbtn{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: rgb(93, 146, 163);
+    padding: 0;
+ 
+ }
+
+ #btn:hover #notbtn:hover{
+    color: rgb(104, 206, 243);
+
+ }
+
+
